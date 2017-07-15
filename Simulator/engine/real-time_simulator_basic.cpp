@@ -35,7 +35,7 @@ list<Time_plot *> response_plot;
 
 // for real-time plotting
 unsigned long long passed_time = 0;
-FILE *acc, *str, *spd, *dis, *lap_time;
+FILE *acc, *str, *spd, *dis, *lap_time, *width, *yaw, *angle;
 FILE *fp_chart, *fp_serial;
 FILE *response_chart[MAX_TASKS];
 
@@ -218,6 +218,9 @@ int main(int argc, char* argv[])
 	fclose(spd);
 	fclose(dis);
 	fclose(lap_time);
+	fclose(angle);
+	fclose(width);
+	fclose(yaw);
 #ifdef NOCANMODE
 	free_shared_mem(user_input, shmid_input);		// shm end (input)
 	free_shared_mem(car_output, shmid_output);	// shm end (output)
@@ -343,6 +346,12 @@ void initialize_for_plotting()
 	dis = fopen(file_name, "w");
 	sprintf(file_name, "%slap_time.txt", LOCATION);
 	lap_time = fopen(file_name, "w");
+	sprintf(file_name, "%strack_width.txt", LOCATION);
+	width = fopen(file_name, "w");
+	sprintf(file_name, "%strack_angle.txt", LOCATION);
+	angle = fopen(file_name, "w");
+	sprintf(file_name, "%syaw.txt", LOCATION);
+	yaw = fopen(file_name, "w");	
 
 	// for expected schedule plotting
 	sprintf(file_name, "%sinternal.log", LOCATION);
@@ -561,12 +570,18 @@ void try_write_for_line_plot()
 		fprintf(spd, "%d.%06d %f\n", sec, usec, car_output[SPEED]);
 		fprintf(dis, "%d.%06d %f\n", sec, usec, car_output[DISTANCE]);
 		fprintf(lap_time, "%d.%06d %f\n", sec, usec, car_output[PASSED_TIME]);
+		fprintf(width, "%d.%06d %f\n", sec, usec, car_output[TRACK_WIDTH]);	
+		fprintf(angle, "%d.%06d %f\n", sec, usec, car_output[TRACK_ANGLE]);
+		fprintf(yaw, "%d.%06d %f\n", sec, usec, car_output[YAW]);
 
 	fflush(acc);
 	fflush(str);
 	fflush(spd);
 	fflush(dis);
 	fflush(lap_time);
+	fflush(width);
+	fflush(angle);
+	fflush(yaw);
 }
 
 /* This function tries to write the current response times of tasks to files for plotting response times.
