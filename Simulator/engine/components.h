@@ -20,6 +20,7 @@
 
 #define PERIOD 0
 #define DEADLINE 1
+#define CUS 2
 
 #define FIXED 0
 #define DYNAMIC 1

@@ -94,8 +94,8 @@ Scheduler::Scheduler(int policy_input, int preempt_input, Resource *resource)
 	}
     else if(policy_input == CUSTOM)
     {
-        p_policy = 0;
-        p_standard = 0;
+        p_policy = 1;
+        p_standard = 2;
     }
 	current_time = 0;
 	resource_link = resource;
@@ -198,6 +198,13 @@ void Scheduler::set_priority()
 	{
 		return;
 	}
+	if(p_standard == CUS)
+	{
+		printf("hello\n");
+		tasks[0]->set_priority(1);
+		tasks[1]->set_priority(0);
+		return;
+	}
 
 	int cur_priority = 0;
 	int min_value;
@@ -208,6 +215,7 @@ void Scheduler::set_priority()
 	{
 		min_value = MAX_INT;
 		min_index = -1;
+			
 		for(unsigned int i = 0; i < tasks.size(); i++)
 		{
 			if(tasks[i]->get_priority() == -1)
