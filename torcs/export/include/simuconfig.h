@@ -1,0 +1,1 @@
+/home/sehkmg/torcs/src/libs/confscreens/simuconfig.h

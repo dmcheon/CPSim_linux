@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.pde;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: wjjang
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/pde/ec
+ lipse.pde.ui.git;path="ui/org.eclipse.pde";tag="I20161212-2000";commi
+ tId=d4a16c38902b31c967976dcb070e00e42471a4a5
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Bundle-Version: 3.13.0.v20170504-0811
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_111
+

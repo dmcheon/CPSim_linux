@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.cvs; singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: wjjang
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/platfo
+ rm/eclipse.platform.releng.git;path="bundles/org.eclipse.cvs";tag="I2
+ 0161130-2000";commitId=742c40980841286c0a35d7a85b864d0ac09aa5a4
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Bundle-Version: 1.4.300.v20170504-0811
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_111
+

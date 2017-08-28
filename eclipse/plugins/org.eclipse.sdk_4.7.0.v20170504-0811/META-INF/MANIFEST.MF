@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.sdk;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: wjjang
+Require-Bundle: org.eclipse.ui;bundle-version="[3.2.0,4.0.0)",org.ecli
+ pse.help.ui;bundle-version="[4.0.0,5.0.0)",org.eclipse.help.base;bund
+ le-version="[4.0.0,5.0.0)",org.eclipse.ui.cheatsheets;bundle-version=
+ "[3.2.0,4.0.0)",org.eclipse.ui.ide.application;bundle-version="[1.0.0
+ ,2.0.0)"
+Bundle-ManifestVersion: 2
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/platfo
+ rm/eclipse.platform.git;path="platform/org.eclipse.sdk";commitId=19f6
+ 0a8c6315e4e643a9b1252e05d3b76262dc84
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Bundle-Version: 4.7.0.v20170504-0811
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_111
+Eclipse-BundleShape: dir
+

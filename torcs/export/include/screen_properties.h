@@ -1,0 +1,1 @@
+/home/sehkmg/torcs/src/libs/tgfclient/screen_properties.h

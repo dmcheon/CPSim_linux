@@ -1,0 +1,96 @@
+var:1
+float steering;
+
+input:0
+
+output:2
+internal_data[5]
+internal_data[6]
+
+CAN_input:0
+
+CAN_output:1
+10:0x7FE:1
+steering STEER
+
+code:
+{
+    float trackWidth = internal_data[0];
+    float distance = internal_data[1];
+    float track_angle = internal_data[2];
+    float yaw = internal_data[3];
+    float speed = internal_data[4];
+
+    if(trackWidth == 0.0) {
+		steering = 0.0;
+    	internal_data[5] = 0.0;
+        internal_data[6] = 0.0;
+    } else {
+    	float targetSteering = 0.0;
+    	float targetAccel = 0.0;
+		float targetBrake = 0.0;
+
+
+		float angle = track_angle - yaw;
+
+		float pi = 3.141592;
+		while (angle > pi)
+			angle -= 2.0*pi;
+		while (angle < -pi)
+			angle += 2.0*pi;
+
+		float absoluteAngle = angle > 0 ? angle : -angle;
+		float absoluteDistance = distance > 0 ? distance : -distance;
+
+		float targetSpeed = 90.0;
+		if (absoluteAngle > pi/2.0) {
+			targetSpeed = 20.0;
+		} else if (absoluteAngle > pi/4.0) {
+			targetSpeed = 30.0;
+		} else if (absoluteAngle > pi/8.0) {
+			targetSpeed = 70.0;
+		} else if (absoluteAngle > pi/16.0) {
+			targetSpeed = 80.0;
+		} else {
+			targetSpeed = 90.0;
+		}
+
+		if (absoluteDistance < 0.15) {
+			targetSpeed = targetSpeed * 0.8;
+		} else {
+			targetSpeed = targetSpeed * 0.6;
+		}
+
+		// calculate steering value
+		float SC = 0.08;
+		targetSteering = angle - SC*distance;
+
+		// calculate accel value
+		float speedDiff = targetSpeed - speed;
+		float remainedDistance = trackWidth - absoluteDistance * 2;
+		if (false && (remainedDistance < -2.5 || remainedDistance < 0 && angle > pi/4.0)) {
+			targetAccel = -1.0;
+			targetBrake = 1.0;
+		} else {
+			targetAccel = speedDiff / 10.0;
+			if (targetAccel > 1.0) {
+				targetAccel = 1.0;
+			} else if (targetAccel < -1.0) {
+				targetAccel = -1.0;
+			}
+		}
+
+		if (speed < 0) {
+			targetSteering = -targetSteering;
+		}
+		steering = targetSteering;
+		internal_data[5] = targetAccel;
+		internal_data[6] = targetBrake;
+
+		printf("----------------------\n");
+		printf("targetAccel: %f\n", internal_data[5]);
+		printf("targetBrake: %f\n", internal_data[6]);
+    }
+
+    ;
+}

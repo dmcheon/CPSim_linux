@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.ui.themes;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: wjjang
+Require-Bundle: org.eclipse.e4.ui.css.swt.theme
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/platfo
+ rm/eclipse.platform.ui.git;path="bundles/org.eclipse.ui.themes";commi
+ tId=eabf2017a60c6c1f1f38998b11a22bbb49acd81e
+Bundle-Vendor: %Plugin.providerName
+Bundle-Name: %Plugin.name
+Bundle-Version: 1.2.0.v20161104-0703
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_111
+Eclipse-BundleShape: dir
+

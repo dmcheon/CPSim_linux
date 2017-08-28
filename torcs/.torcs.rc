@@ -1,0 +1,2 @@
+TORCS_BASE = /home/sehkmg/torcs
+MAKE_DEFAULT = /home/sehkmg/torcs/Make-default.mk

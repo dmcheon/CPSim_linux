@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.jdt; singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: wjjang
+Require-Bundle: org.eclipse.ui.intro;bundle-version="[3.2.0,4.0.0)",or
+ g.eclipse.ui.cheatsheets;bundle-version="[3.2.0,4.0.0)"
+Bundle-ManifestVersion: 2
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/jdt/ec
+ lipse.jdt.git;path="org.eclipse.jdt";tag="I20161115-2000";commitId=75
+ ae88ecb02b06ebec0ddb65c66d3d050d6c590d
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Bundle-Version: 3.13.0.v20170504-0811
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_111
+

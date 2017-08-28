@@ -1,0 +1,2 @@
+# of ECUs: 4, lap time: 105.835999 sec, average distance: 1.024563 m
+score: 43.784332

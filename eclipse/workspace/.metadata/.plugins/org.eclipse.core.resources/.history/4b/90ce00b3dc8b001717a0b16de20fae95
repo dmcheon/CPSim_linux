@@ -1,0 +1,24 @@
+var:0
+
+input:0
+
+output:1
+internal_data[4]
+
+CAN_input:1				//you don't need to change this part
+0:0x7FD:1
+car_output[SPEED]
+
+CAN_output:0
+
+code:
+{
+	float want_to_store;
+	float data = previous_data;		//you can access stored data (want_to_store from before) by previous_data
+
+	internal_data[4] = car_output[SPEED];
+
+	//printf("%f\n", car_output[TRACK_NUM]);			//you can get track name with car_output[TRACK_NUM] see track_info in the root
+
+	return want_to_store;		//return what you want to store globally
+}

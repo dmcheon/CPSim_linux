@@ -1,0 +1,27 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: +m+pvUM+3kazxL79ShncUBOO2G+yz
+ gP90IagqLIt02o=
+SHA-256-Digest-Manifest: UK9J3S0r9duGdgo6n3nqJXEfUo7PMSYzZuYFXx3Aml4=
+Created-By: 1.8.0_102 (Oracle Corporation)
+
+Name: plugin.xml
+SHA-256-Digest: WIQgkzzT7v8D9S2O1SFnc6YK4TM594QVYzS8pzUZPcs=
+
+Name: about.html
+SHA-256-Digest: fz3somdR7f7Qlv4MFhaJfkDWglIbzI8gaTyRV90fCPs=
+
+Name: plugin.properties
+SHA-256-Digest: M3sEtapWS13dKam0oFo1EkCl5sra1Se7FSISRfRhYvs=
+
+Name: .api_description
+SHA-256-Digest: qQgZSLEbdWPH/I2FFhd0HTpUVl+vUwjXVJLdTuAiXtw=
+
+Name: jdi.jar
+SHA-256-Digest: VLRdDCPqsYA5za9JZZqGOxiZYOCexz728B3U1Mhq4SI=
+
+Name: .options
+SHA-256-Digest: kJycZkplIvymLb+2FdSCAY2WYLpePjyKfyVOCQmvRiA=
+
+Name: jdimodel.jar
+SHA-256-Digest: P3p2fQJ5ubUMOHhoc6Z1EBjpTbaqa0QFZrr/gTgWr44=
+

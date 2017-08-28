@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.equinox.launcher.gtk.linux.x86_64;sin
+ gleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: wjjang
+Bundle-ManifestVersion: 2
+Eclipse-PlatformFilter: (& (osgi.ws=gtk) (osgi.os=linux) (osgi.arch=x8
+ 6_64))
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/equino
+ x/rt.equinox.framework.git;path="bundles/org.eclipse.equinox.launcher
+ .gtk.linux.x86_64";tag="I20161201-2000";commitId=c24a2f4689d418bde6b5
+ 82e64b10694082fff095
+Bundle-Vendor: %providerName
+Fragment-Host: org.eclipse.equinox.launcher;bundle-version="[1.0.0,1.5
+ .0)"
+Bundle-Name: %pluginName
+Bundle-Version: 1.1.500.v20161026-0946
+Bundle-Localization: launcher.gtk.linux.x86_64
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_111
+Eclipse-BundleShape: dir
+

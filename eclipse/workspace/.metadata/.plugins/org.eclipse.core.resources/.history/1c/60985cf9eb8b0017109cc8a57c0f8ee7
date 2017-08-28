@@ -1,0 +1,27 @@
+var:2
+float accel;
+float brake;
+
+input:0
+
+output:0
+
+CAN_input:0
+
+CAN_output:1
+10:0x7FF:2
+accel ACCEL
+brake BRAKE
+
+code:
+{
+	float targetAccel = internal_data[5];
+	float targetBrake = internal_data[6];
+
+	accel = targetAccel;
+	brake = targetBrake;
+
+	printf("*****************************\n");
+	printf("cc2: %f\n", internal_data[5]);
+	printf("cc2: %f\n", internal_data[6]);
+}
