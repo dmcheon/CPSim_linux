@@ -200,7 +200,6 @@ void Scheduler::set_priority()
 	}
 	if(p_standard == CUS)
 	{
-		printf("hello\n");
 		tasks[0]->set_priority(1);
 		tasks[1]->set_priority(0);
 		return;
